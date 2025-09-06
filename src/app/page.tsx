@@ -21,7 +21,7 @@ const EMAIL = "yashmevat16@gmail.com";
 
 // Put these files in `/public`
 const RESUME_LINK = "/YashResume2025.pdf";
-const PROFILE_IMAGE = "/profile.jpg";
+const PROFILE_IMAGE = "/profile2.jpg";
 
 // ====== Motion Variants / Helpers ======
 const fadeInUp = {
@@ -98,9 +98,8 @@ function Navbar() {
 
   return (
     <div
-      className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "backdrop-blur bg-black/30" : "bg-transparent"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "backdrop-blur bg-black/30" : "bg-transparent"
+        }`}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <button
@@ -221,16 +220,17 @@ function Hero() {
               <span className="bg-gradient-to-r from-indigo-300 to-fuchsia-300 bg-clip-text text-transparent">
                 MCA Student
               </span>{" "}
-              & Full-Stack Web Developer
+              & MERN Stack Developer
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
               className="mt-4 max-w-xl text-white/70"
             >
-              I build responsive, animated, and user-friendly products with
-              Next.js, React, Node.js, Prisma, and more.
+              Currently working at <span className="font-semibold text-white">Ekarigar Technologies</span> as a MERN Stack Developer.
+              I build responsive, animated, and user-friendly products with Next.js, React, Node.js, Prisma, and more.
             </motion.p>
+
 
             <motion.div
               variants={fadeInUp}
@@ -372,17 +372,22 @@ function About() {
             About Me
           </h2>
           <p className="mt-4 max-w-2xl text-white/70">
-            MCA student & full-stack developer focused on performance,
-            accessibility, and delightful micro-interactions. I ship polished UI
-            with React/Next.js, TypeScript, TailwindCSS, and Framer Motion, and
-            I enjoy building real-world apps with Node.js, Express, Prisma, and
-            SQL/NoSQL databases.
+            MCA student & MERN Stack Developer currently working at
+            <span className="font-semibold text-white"> Ekarigar Technologies</span>.
+            I focus on performance, accessibility, and smooth micro-interactions.
+            I ship polished UI with React/Next.js, TypeScript, TailwindCSS, and Framer Motion,
+            and I enjoy building real-world apps with Node.js, Express, MongoDB, and Prisma.
           </p>
+
           <div className="mt-6 flex flex-wrap gap-2">
             {[
               "Next.js",
               "TypeScript",
               "Node.js",
+              "PHP",
+              "PHP codeigniter",
+              "wordpress CMS",
+              "Shopify",
               "Prisma",
               "PostgreSQL",
               "MongoDB",
@@ -399,7 +404,7 @@ function About() {
           <img
             src={PROFILE_IMAGE}
             alt={`${YOUR_NAME} portrait`}
-            className="relative aspect-[1/1] w-full rounded-3xl border border-white/10 object-cover"
+            className="relative aspect-[4/5] w-full  rounded-3xl border border-white/10 object-cover"
           />
         </motion.div>
       </motion.div>
@@ -436,68 +441,75 @@ const PROJECTS = [
   {
     title: "Email Verification System",
     desc: "Email Verification System in next js and nextauth with proper verification using nodemailer and forgot password functionality as well",
-    tags: ["next.js", "nodemailer", "JavaScript", "nextauth"],
+    tags: ["Next.js", "Nodemailer", "JavaScript", "NextAuth"],
     link: "https://nextauth-two-iota.vercel.app/login",
   },
+  {
+    title: "Workforce Reporting System",
+    desc: "Enterprise workforce reporting system developed at Ekarigar Technologies. Includes daily reports with AI-generated summaries, manager approval workflows, weekly report submissions, and automated notifications.",
+    tags: ["Next.js", "Node.js", "MongoDB", "Cloudinary", "Multer"],
+    link: "https://diamondraja.com/vis",
+  },
 ];
+
 
 function Projects() {
   return (
     <Section id="projects" className="py-20">
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={stagger}
-      >
-        <motion.h2
-          variants={fadeInUp}
-          className="text-3xl font-semibold text-white md:text-4xl"
-        >
-          Selected Projects
-        </motion.h2>
-        <motion.p
-          variants={fadeInUp}
-          className="mt-2 max-w-2xl text-white/70"
-        >
-          Animations with intent—snappy where it matters, subtle where it
-          counts.
-        </motion.p>
+  <motion.div
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.2 }}
+    variants={stagger}
+  >
+    <motion.h2
+      variants={fadeInUp}
+      className="text-3xl font-semibold text-white md:text-4xl"
+    >
+      Selected Projects
+    </motion.h2>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          {PROJECTS.map((p) => (
-            <motion.article
-              key={p.title}
-              variants={fadeInUp}
-              whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5"
-            >
-              <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-500/25 to-fuchsia-500/25 blur-2xl transition group-hover:scale-125" />
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg border border-white/15 bg-white/10 p-2 text-white/80 transition hover:bg-white/20"
-                  aria-label="Open"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">
-                {p.desc}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {p.tags.map((t) => (
-                  <Tag key={t}>{t}</Tag>
-                ))}
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </motion.div>
-    </Section>
+    <motion.p
+      variants={fadeInUp}
+      className="mt-2 max-w-2xl text-white/70"
+    >
+      Animations with intent—snappy where it matters, subtle where it counts.
+    </motion.p>
+
+    <div className="mt-8 grid gap-6 sm:grid-cols-2">
+      {PROJECTS.map((p) => (
+        <motion.a
+          key={p.title}
+          href={p.link}
+          target="_blank"
+          rel="noreferrer"
+          variants={fadeInUp}
+          whileHover={{ y: -6, scale: 1.02 }}
+          className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 cursor-pointer block transition"
+        >
+          {/* Glow background */}
+          <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-indigo-500/25 to-fuchsia-500/25 blur-2xl transition group-hover:scale-125" />
+
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+            <ExternalLink className="h-4 w-4 text-white/80 transition group-hover:text-white" />
+          </div>
+
+          <p className="mt-2 text-sm leading-relaxed text-white/70">
+            {p.desc}
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {p.tags.map((t) => (
+              <Tag key={t}>{t}</Tag>
+            ))}
+          </div>
+        </motion.a>
+      ))}
+    </div>
+  </motion.div>
+</Section>
+
   );
 }
 
@@ -507,10 +519,12 @@ const SKILLS = [
   { name: "C/C++", level: 95 },
   { name: "React.js", level: 90 },
   { name: "Node.js", level: 88 },
+  { name: "Next.js", level: 90 },
   { name: "PHP with codeigniter", level: 85 },
   { name: "MongoDB", level: 85 },
   { name: "MySQL", level: 82 },
-  { name: "Next.js", level: 90 },
+  { name: "Wordpress CMS", level: 75 },
+  { name: "Shopify", level: 75 },
 ];
 
 function Skills() {
