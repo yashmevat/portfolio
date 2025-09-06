@@ -228,7 +228,7 @@ function Hero() {
               className="mt-4 max-w-xl text-white/70"
             >
               Currently working at <span className="font-semibold text-white">Ekarigar Technologies</span> as a MERN Stack Developer.
-              I build responsive, animated, and user-friendly products with Next.js, React, Node.js, Prisma, and more.
+              I build responsive, animated, and user-friendly products with Next.js, React, Node.js, PHP, PHP codeigniter, Prisma, and more.
             </motion.p>
 
 
