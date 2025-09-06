@@ -376,7 +376,7 @@ function About() {
             <span className="font-semibold text-white"> Ekarigar Technologies</span>.
             I focus on performance, accessibility, and smooth micro-interactions.
             I ship polished UI with React/Next.js, TypeScript, TailwindCSS, and Framer Motion,
-            and I enjoy building real-world apps with Node.js, Express, MongoDB, and Prisma.
+            and I enjoy building real-world apps with Next.js, Express.js, MongoDB, MYSQL, PHP, PHP Codeigniter and Prisma.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2">
