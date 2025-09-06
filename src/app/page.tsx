@@ -417,7 +417,7 @@ const PROJECTS = [
   {
     title: "Chat Application",
     desc: "Real-time chat app using Socket.io and Node.js server.",
-    tags: ["Node.js", "Socket.io"],
+    tags: ["Node.js", "Socket.io","Express.js"],
     link: "https://chatapp-djtb.onrender.com/",
   },
   {
@@ -447,7 +447,7 @@ const PROJECTS = [
   {
     title: "Workforce Reporting System",
     desc: "Enterprise workforce reporting system developed at Ekarigar Technologies. Includes daily reports with AI-generated summaries, manager approval workflows, weekly report submissions, and automated notifications.",
-    tags: ["Next.js", "Node.js", "MongoDB", "Cloudinary", "Multer"],
+    tags: ["Next.js", "Node.js", "MYSQL", "Multer"],
     link: "https://diamondraja.com/vis",
   },
 ];
