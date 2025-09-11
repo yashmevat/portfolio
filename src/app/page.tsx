@@ -416,9 +416,9 @@ function About() {
 const PROJECTS = [
   {
     title: "Chat Application",
-    desc: "Real-time chat app using Socket.io and Node.js server.",
+    desc: "Real-time chat app using Socket.io and Node.js server along with group chat functioanlity.",
     tags: ["Node.js", "Socket.io","Express.js"],
-    link: "https://chatapp-djtb.onrender.com/",
+    link: "https://mytextu.netlify.app/",
   },
   {
     title: "Notes Application",
